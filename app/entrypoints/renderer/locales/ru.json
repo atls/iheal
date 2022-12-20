@@ -1,0 +1,15 @@
+{
+  "sidebar.orders": "Заказы",
+  "sidebar.stock": "Склад",
+  "sidebar.finance": "Финансы",
+  "sidebar.contacts": "Контакты",
+  "sidebar.reports": "Отчеты",
+  "sidebar.exit": "Выход",
+  "search.new_order": "Новый заказ",
+  "search.search": "Поиск по заказам",
+  "controls.all": "Все",
+  "controls.express": "Срочный",
+  "controls.warranty": "Гарантийный",
+  "controls.onsite": "Выездной",
+  "controls.filter": "Фильтр"
+}

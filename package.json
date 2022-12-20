@@ -1,15 +1,32 @@
 {
-  "name": "template",
-  "license": "BSD 3-Clause",
+  "name": "iheal",
   "private": true,
-  "devDependencies": {
-    "@atls/code-service": "^0.0.15",
-    "@atls/config-jest": "^0.0.4",
-    "@atls/schematics": "^0.0.12",
-    "@jest/core": "^28.0.1",
-    "eslint": "^8.12.0",
-    "husky": "^8.0.1",
-    "typescript": "^4.6.2"
+  "license": "BSD 3-Clause",
+  "workspaces": [
+    "app/**/*",
+    "ui/**/*",
+    "shared/**/*"
+  ],
+  "scripts": {
+    "postinstall": "yarn workspace @ui/icons generate-icons"
   },
-  "packageManager": "yarn@3.2.1"
+  "resolutions": {
+    "@types/react": "18.0.1",
+    "react-intl": "5.24.3",
+    "typescript": "4.4.4"
+  },
+  "devDependencies": {
+    "@atls/code-service": "^0.0.17",
+    "@atls/config-jest": "^0.0.5",
+    "@atls/schematics": "^0.0.13",
+    "@jest/core": "^28.0.1",
+    "@types/eslint": "^8",
+    "@types/jest": "^28.1.3",
+    "@types/node": "16.11.10",
+    "@types/react": "^18.0.1",
+    "eslint": "8.18.0",
+    "husky": "^8.0.1",
+    "typescript": "^4.4.4"
+  },
+  "packageManager": "yarn@3.2.4"
 }

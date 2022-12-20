@@ -1,0 +1,5 @@
+export const ORDERS_ROUTE = '/orders'
+export const STOCK_ROUTE = '/stock'
+export const FINANCE_ROUTE = '/finance'
+export const CONTACTS_ROUTE = '/contacts'
+export const REPORTS_ROUTE = '/reports'
