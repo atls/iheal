@@ -347,17 +347,17 @@ const colors = {
     primary: {
       default: {
         background: 'rgba(246, 246, 244, 1)',
-        font: 'rgba(30, 25, 21, 1)',
+        font: 'rgba(81, 76, 72, 1)',
         border: 'rgba(235, 235, 235, 1)',
       },
       filled: {
         background: 'rgba(246, 246, 244, 1)',
-        font: 'rgba(30, 25, 21, 1)',
-        border: 'rgba(235, 235, 235, 1)',
+        font: 'rgba(81, 76, 72, 1)',
+        border: 'rgba(178, 175, 169, 1)',
       },
       hover: {
         background: 'rgba(246, 246, 244, 1)',
-        font: 'rgba(30, 25, 21, 1)',
+        font: 'rgba(81, 76, 72, 1)',
         border: 'rgba(178, 175, 169, 1)',
       },
     },

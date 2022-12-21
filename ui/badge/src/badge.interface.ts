@@ -7,4 +7,6 @@ export interface BadgeProps {
   icon?: ReactChild | null
   position?: string | null
   variant?: Variant
+  isRemove?: boolean
+  remove?: () => any
 }

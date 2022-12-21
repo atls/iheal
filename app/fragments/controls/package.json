@@ -10,6 +10,7 @@
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/link": "workspace:0.0.1",
+    "@ui/select": "workspace:0.0.1",
     "@ui/tabs": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
     "@ui/utils": "workspace:0.0.1"

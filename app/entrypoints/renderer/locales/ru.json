@@ -11,5 +11,22 @@
   "controls.express": "Срочный",
   "controls.warranty": "Гарантийный",
   "controls.onsite": "Выездной",
-  "controls.filter": "Фильтр"
+  "controls.filter": "Фильтр",
+  "controls.status": "Статус",
+  "controls.order_type": "Тип заказа",
+  "controls.order_created": "Заказ создан",
+  "controls.group": "Группа",
+  "controls.brand": "Бренд",
+  "controls.model": "Модель",
+  "controls.client": "Клиент",
+  "controls.manager": "Менеджер",
+  "controls.performer": "Исполнитель",
+  "controls.accept": "Применить",
+  "controls.reset_params": "Сбросить параметры",
+  "controls.new": "Новый",
+  "controls.in_work": "В работе",
+  "controls.ready": "Готово",
+  "controls.waiting": "Ожидание",
+  "controls.reject": "Отказ",
+  "controls.closed": "Закрыт"
 }

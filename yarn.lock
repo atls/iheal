@@ -185,6 +185,7 @@ __metadata:
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
+    "@ui/select": "workspace:0.0.1"
     "@ui/tabs": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
@@ -474,6 +475,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/button@npm:^0.0.7":
+  version: 0.0.7
+  resolution: "@atls-ui-parts/button@npm:0.0.7"
+  dependencies:
+    "@atls-ui-parts/styles": 0.0.4
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  checksum: 69bcf51c4675fc9e326abd0c2e1553ada45239b50609307c21185949a428f466badee92ccc585ba884f597860cd78f85f59124a0ab350086f3b2453104ae332d
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/checkbox@npm:^0.0.6":
   version: 0.0.6
   resolution: "@atls-ui-parts/checkbox@npm:0.0.6"
@@ -566,6 +581,25 @@ __metadata:
     react: ^17.0.1
     styled-system: ^5.1.5
   checksum: e6220f3e6d068443766af3f26a3022c87e2518f0a6f2a0aae9c7419d3e2519023daf60756ea4372b553da5471b2d78dad80672ff9ae5170c3b31ee75f341ef10
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/select@npm:^0.0.13":
+  version: 0.0.13
+  resolution: "@atls-ui-parts/select@npm:0.0.13"
+  dependencies:
+    "@atls-ui-parts/styles": 0.0.4
+    downshift: ^6.1.7
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    framer-motion: "*"
+    react: "*"
+    react-dom: "*"
+    react-laag: "*"
+    styled-system: "*"
+    styled-tools: "*"
+  checksum: 9036129388cd30629a198c389db9d314f1351a52f6c35013c1b319dffc5f9b81432ad86ea504bd7c5d2cfcdc3f7f4b9e7f1c99dceaf970ffbfaf39ec32f3c310
   languageName: node
   linkType: hard
 
@@ -1192,7 +1226,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.14.8, @babel/runtime@npm:^7.18.3":
   version: 7.20.6
   resolution: "@babel/runtime@npm:7.20.6"
   dependencies:
@@ -2998,7 +3032,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/badge@workspace:ui/badge":
+"@ui/badge@workspace:0.0.1, @ui/badge@workspace:ui/badge":
   version: 0.0.0-use.local
   resolution: "@ui/badge@workspace:ui/badge"
   dependencies:
@@ -3240,6 +3274,43 @@ __metadata:
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/select@workspace:0.0.1, @ui/select@workspace:ui/select":
+  version: 0.0.0-use.local
+  resolution: "@ui/select@workspace:ui/select"
+  dependencies:
+    "@atls-ui-parts/button": ^0.0.7
+    "@atls-ui-parts/select": ^0.0.13
+    "@atls-ui-parts/styles": ^0.0.4
+    "@emotion/css": ^11.10.0
+    "@emotion/react": ^11.10.0
+    "@emotion/styled": ^11.10.0
+    "@shared/utils": "workspace:0.0.1"
+    "@types/react": ^18.0.17
+    "@types/react-dom": ^18.0.6
+    "@types/styled-system": ^5
+    "@ui/badge": "workspace:0.0.1"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/checkbox": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    downshift: ^6.1.9
+    framer-motion: ^7.2.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-laag: ^2.0.4
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -4813,6 +4884,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"compute-scroll-into-view@npm:^1.0.17":
+  version: 1.0.20
+  resolution: "compute-scroll-into-view@npm:1.0.20"
+  checksum: f15fab29221953620735393ac1866541aab0d27d28078bedbba071a291ee9c8cc1a72bee302cf0bc06ed83c5e55afb74ebcbd634a63671ba33cf1fb1c51d3308
+  languageName: node
+  linkType: hard
+
 "concat-map@npm:0.0.1":
   version: 0.0.1
   resolution: "concat-map@npm:0.0.1"
@@ -5072,6 +5150,21 @@ __metadata:
   dependencies:
     esutils: ^2.0.2
   checksum: fd7673ca77fe26cd5cba38d816bc72d641f500f1f9b25b83e8ce28827fe2da7ad583a8da26ab6af85f834138cf8dae9f69b0cd6ab925f52ddab1754db44d99ce
+  languageName: node
+  linkType: hard
+
+"downshift@npm:^6.1.7, downshift@npm:^6.1.9":
+  version: 6.1.12
+  resolution: "downshift@npm:6.1.12"
+  dependencies:
+    "@babel/runtime": ^7.14.8
+    compute-scroll-into-view: ^1.0.17
+    prop-types: ^15.7.2
+    react-is: ^17.0.2
+    tslib: ^2.3.0
+  peerDependencies:
+    react: ">=16.12.0"
+  checksum: c623dc436f332fefddc332b42ca4a267b3f5b47aaf1372a61212678d7ecbe22698fdb63f61373bcbd3773fa526eb4f210cf7f044cd5642b689dbd37ba27e9aaf
   languageName: node
   linkType: hard
 
@@ -5701,6 +5794,24 @@ __metadata:
     "@emotion/is-prop-valid":
       optional: true
   checksum: 8cf2f39874610745d15dc36e90edc71898daaca460e0538fb206a77149a3bb02054b1e792b5cd2c16750e5d3d5009d5f45cd5e6571b2410d3643332fcf29c152
+  languageName: node
+  linkType: hard
+
+"framer-motion@npm:^7.2.1":
+  version: 7.10.3
+  resolution: "framer-motion@npm:7.10.3"
+  dependencies:
+    "@emotion/is-prop-valid": ^0.8.2
+    "@motionone/dom": ^10.15.3
+    hey-listen: ^1.0.8
+    tslib: 2.4.0
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  checksum: 20ce8459e7e3c631af5261215acd2217f57f15d64448e2bd64eecf74d3406552523082c182211af086e01b44daad7a0c216d5135a3f8ae56fb63e152e54233aa
   languageName: node
   linkType: hard
 
@@ -8338,6 +8449,13 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
+  languageName: node
+  linkType: hard
+
+"react-is@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react-is@npm:17.0.2"
+  checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
   languageName: node
   linkType: hard
 

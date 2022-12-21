@@ -2,7 +2,7 @@ import React               from 'react'
 import { forwardRef }      from 'react'
 
 import { Condition }       from '@ui/condition'
-import { CheckIcon }       from '@ui/icons'
+import { ComponentIcon }   from '@ui/icons'
 import { MinusIcon }       from '@ui/icons'
 import { doNothing }       from '@shared/utils'
 import { useHover }        from '@ui/utils'
@@ -19,6 +19,7 @@ const CheckboxWithoutRef = (
     icon = 'check',
     active,
     disabled,
+    ghost = false,
     onCheck = (newState) => doNothing(),
     ...props
   }: CheckboxProps,
@@ -33,17 +34,19 @@ const CheckboxWithoutRef = (
       {...hoverProps}
       ref={ref}
     >
-      <Box checked={active!} hover={hover!} disabled={disabled!}>
-        <SelectCheckmark checked={active!}>
-          <Condition match={icon === 'check'}>
-            <CheckIcon color='white' width={14} height={14} />
-          </Condition>
-          <Condition match={icon === 'minus'}>
-            <MinusIcon color='white' width={14} height={14} />
-          </Condition>
-        </SelectCheckmark>
-      </Box>
-      <Label>{children}</Label>
+      <Condition match={!ghost}>
+        <Box checked={active!} hover={hover!} disabled={disabled!}>
+          <SelectCheckmark checked={active!}>
+            <Condition match={icon === 'check'}>
+              <ComponentIcon color='white' width={14} height={14} />
+            </Condition>
+            <Condition match={icon === 'minus'}>
+              <MinusIcon color='white' width={14} height={14} />
+            </Condition>
+          </SelectCheckmark>
+        </Box>
+      </Condition>
+      <Label ghost={ghost!}>{children}</Label>
     </Container>
   )
 }

@@ -5,6 +5,7 @@ export interface CheckboxProps {
   disabled?: boolean
   onCheck?: (newState: boolean) => any
   fill?: boolean
+  ghost?: boolean
   children?: any
   icon?: string
 }

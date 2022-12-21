@@ -41,7 +41,6 @@ table tr td {
     max-height: 55px;
     right: 0;
     top: 0;
-    z-index: 1;
     border-right: ${theme.borders.transparent};
 }
 

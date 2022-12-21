@@ -1,19 +1,24 @@
-import React           from 'react'
-import { FC }          from 'react'
-import { useState }    from 'react'
-import { useIntl }     from 'react-intl'
+import React             from 'react'
+import { FC }            from 'react'
+import { useState }      from 'react'
+import { useIntl }       from 'react-intl'
 
-import { Box }         from '@ui/layout'
-import { Row }         from '@ui/layout'
-import { Column }      from '@ui/layout'
-import { Layout }      from '@ui/layout'
-import { Tabs }        from '@ui/tabs'
+import { Condition }     from '@ui/condition'
+import { Box }           from '@ui/layout'
+import { Row }           from '@ui/layout'
+import { Column }        from '@ui/layout'
+import { Layout }        from '@ui/layout'
+import { Tabs }          from '@ui/tabs'
 
-import { ControlName } from './controls.interface'
-import { Filters }     from './filters'
+import { ControlName }   from './controls.interface'
+import { ButtonFilters } from './filters'
+import { Filters }       from './filters'
 
 const Controls: FC = () => {
   const { formatMessage } = useIntl()
+
+  const [selectedTab, setSelectedTab] = useState<string>(ControlName.ALL)
+  const [openFilters, setOpenFilters] = useState<boolean>(false)
 
   const tabs = [
     {
@@ -34,8 +39,6 @@ const Controls: FC = () => {
     },
   ]
 
-  const [selectedTab, setSelectedTab] = useState<string>(ControlName.ALL)
-
   return (
     <Box width='100%' backgroundColor='white'>
       <Layout flexBasis={24} flexShrink={0} />
@@ -46,9 +49,15 @@ const Controls: FC = () => {
           </Layout>
           <Layout flexGrow={1} />
           <Layout width={160}>
-            <Filters />
+            <ButtonFilters openFilters={openFilters} setOpenFilters={setOpenFilters} />
           </Layout>
         </Row>
+        <Condition match={openFilters}>
+          <Layout flexBasis={16} />
+          <Row>
+            <Filters />
+          </Row>
+        </Condition>
         <Layout flexBasis={16} />
       </Column>
       <Layout flexBasis={24} flexShrink={0} />

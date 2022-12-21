@@ -14,9 +14,10 @@ export const labelAppearanceStyles = createLabelAppearanceStyles({
   fontColor: theme.colors.black,
 })
 
-export const labelPositionStyles = createLabelPositionStyles({
-  margin: '8px',
-})
+export const labelPositionStyles = ({ ghost }) =>
+  createLabelPositionStyles({
+    margin: ghost ? '0px' : '8px',
+  })
 
 export const containerPositionStyles = createContainerPositionStyles()
 

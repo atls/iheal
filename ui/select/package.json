@@ -1,0 +1,41 @@
+{
+  "name": "@ui/select",
+  "version": "0.0.1",
+  "license": "BSD-3-Clase",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@atls-ui-parts/button": "^0.0.7",
+    "@atls-ui-parts/select": "^0.0.13",
+    "@atls-ui-parts/styles": "^0.0.4",
+    "@shared/utils": "workspace:0.0.1",
+    "@ui/badge": "workspace:0.0.1",
+    "@ui/button": "workspace:0.0.1",
+    "@ui/checkbox": "workspace:0.0.1",
+    "@ui/condition": "workspace:0.0.1",
+    "@ui/icons": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
+    "downshift": "^6.1.9",
+    "framer-motion": "^7.2.1",
+    "react-laag": "^2.0.4",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2"
+  },
+  "devDependencies": {
+    "@emotion/css": "^11.10.0",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@types/styled-system": "^5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*"
+  }
+}
