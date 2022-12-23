@@ -170,6 +170,28 @@ const colors = {
         border: 'transparent',
       },
     },
+    tertiaryActive: {
+      default: {
+        background: 'rgba(255, 255, 255, 1)',
+        font: 'rgba(255, 113, 64, 1)',
+        border: 'rgba(255, 113, 64, 1)',
+      },
+      hover: {
+        background: 'rgba(255, 255, 255, 1)',
+        font: 'rgba(255, 113, 64, 1)',
+        border: 'rgba(255, 113, 64, 1)',
+      },
+      pressed: {
+        background: 'rgba(255, 255, 255, 1)',
+        font: 'rgba(255, 113, 64, 1)',
+        border: 'rgba(255, 113, 64, 1)',
+      },
+      disabled: {
+        background: 'rgba(246, 246, 244, 1)',
+        font: 'rgba(178, 175, 169, 1)',
+        border: 'transparent',
+      },
+    },
     link: {
       default: {
         background: 'transparent',

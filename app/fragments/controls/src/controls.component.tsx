@@ -55,7 +55,7 @@ const Controls: FC = () => {
         <Condition match={openFilters}>
           <Layout flexBasis={16} />
           <Row>
-            <Filters />
+            <Filters setOpenFilters={setOpenFilters} />
           </Row>
         </Condition>
         <Layout flexBasis={16} />

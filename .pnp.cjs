@@ -876,6 +876,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:18.0.1"],\
             ["@types/react-dom", null],\
             ["@types/react-intl", null],\
+            ["@types/react-table", "npm:7.7.12"],\
             ["@types/styled-system", "npm:5.1.15"],\
             ["@ui/button", "virtual:ce9d7390bfde94d69e9c6ade36709ade3f11ca08ba21a5d659259366720d0f296150b52a4484c3ee584f362b5f20205f9cb5524323779f56a9590f3973bd5426#workspace:ui/button"],\
             ["@ui/checkbox", "virtual:a8fd6d78ad66174c146e42f208cb10e74f4e939bcce7ef14e20692ec18063753554854d6155c1ea25029acba6b79049764cb0706c441ff59008d2bdcda645495#workspace:ui/checkbox"],\
@@ -889,7 +890,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:12.1.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:18.2.0"],\
-            ["react-intl", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:5.24.3"]\
+            ["react-intl", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:5.24.3"],\
+            ["react-table", "virtual:fb73233ae86852e26150f9b5ac03eed78a196f059a7cbf620501f1b0e66d3a938585bcd47fe333903dbc15b4908657a4d6884a19924dc415d0d7c8a42bceb00c#npm:7.8.0"]\
           ],\
           "packagePeers": [\
             "@types/apollo__client",\
@@ -923,6 +925,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", null],\
             ["@types/react-dom", null],\
             ["@types/react-intl", null],\
+            ["@types/react-table", "npm:7.7.12"],\
             ["@types/styled-system", "npm:5.1.15"],\
             ["@ui/button", "virtual:4b8d734932782441d6733de4788fe8c6dbca6eaf474b158a20fbf39b0b887dfc21ccc69354f91c344116093e49490fb46e3690259ca82a1353487c217e54e2a4#workspace:ui/button"],\
             ["@ui/checkbox", "virtual:878216d56fdf8f5d6a95454b4ec039917e664b3646b8beb0725439aa01f8fc9d981fcc3e4d6e38bfa26958a0c38cc08dd50ae715bd51c17e46affeb4b7d544dd#workspace:ui/checkbox"],\
@@ -936,7 +939,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:6c3cdeb7bb8535ab1462515a3d36a314d42b7279b42c88a0e51f0266d0fccf40ed155b251e961ed787b4330b0b71cdea3f62f85274c57669609e01527d2f0cd3#npm:12.1.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:4b8d734932782441d6733de4788fe8c6dbca6eaf474b158a20fbf39b0b887dfc21ccc69354f91c344116093e49490fb46e3690259ca82a1353487c217e54e2a4#npm:18.2.0"],\
-            ["react-intl", "virtual:4b8d734932782441d6733de4788fe8c6dbca6eaf474b158a20fbf39b0b887dfc21ccc69354f91c344116093e49490fb46e3690259ca82a1353487c217e54e2a4#npm:5.24.3"]\
+            ["react-intl", "virtual:4b8d734932782441d6733de4788fe8c6dbca6eaf474b158a20fbf39b0b887dfc21ccc69354f91c344116093e49490fb46e3690259ca82a1353487c217e54e2a4#npm:5.24.3"],\
+            ["react-table", "virtual:238673ec0a39f356445d82e302eca257f37c4b080aee8ac49cb80d8ef7d46799d87f853ebc400a64d1af218bce2563f720dd3e883b8aadd78f0ac8afa3a8ea9e#npm:7.8.0"]\
           ],\
           "packagePeers": [\
             "@types/apollo__client",\
@@ -962,6 +966,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:4b8d734932782441d6733de4788fe8c6dbca6eaf474b158a20fbf39b0b887dfc21ccc69354f91c344116093e49490fb46e3690259ca82a1353487c217e54e2a4#npm:11.10.5"],\
             ["@emotion/styled", "virtual:4b8d734932782441d6733de4788fe8c6dbca6eaf474b158a20fbf39b0b887dfc21ccc69354f91c344116093e49490fb46e3690259ca82a1353487c217e54e2a4#npm:11.10.5"],\
             ["@shared/data", "virtual:4b8d734932782441d6733de4788fe8c6dbca6eaf474b158a20fbf39b0b887dfc21ccc69354f91c344116093e49490fb46e3690259ca82a1353487c217e54e2a4#workspace:shared/data"],\
+            ["@types/react-table", "npm:7.7.12"],\
             ["@types/styled-system", "npm:5.1.15"],\
             ["@ui/button", "virtual:4b8d734932782441d6733de4788fe8c6dbca6eaf474b158a20fbf39b0b887dfc21ccc69354f91c344116093e49490fb46e3690259ca82a1353487c217e54e2a4#workspace:ui/button"],\
             ["@ui/checkbox", "virtual:878216d56fdf8f5d6a95454b4ec039917e664b3646b8beb0725439aa01f8fc9d981fcc3e4d6e38bfa26958a0c38cc08dd50ae715bd51c17e46affeb4b7d544dd#workspace:ui/checkbox"],\
@@ -975,7 +980,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:4b8d734932782441d6733de4788fe8c6dbca6eaf474b158a20fbf39b0b887dfc21ccc69354f91c344116093e49490fb46e3690259ca82a1353487c217e54e2a4#npm:12.1.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:4b8d734932782441d6733de4788fe8c6dbca6eaf474b158a20fbf39b0b887dfc21ccc69354f91c344116093e49490fb46e3690259ca82a1353487c217e54e2a4#npm:18.2.0"],\
-            ["react-intl", "virtual:4b8d734932782441d6733de4788fe8c6dbca6eaf474b158a20fbf39b0b887dfc21ccc69354f91c344116093e49490fb46e3690259ca82a1353487c217e54e2a4#npm:5.24.3"]\
+            ["react-intl", "virtual:4b8d734932782441d6733de4788fe8c6dbca6eaf474b158a20fbf39b0b887dfc21ccc69354f91c344116093e49490fb46e3690259ca82a1353487c217e54e2a4#npm:5.24.3"],\
+            ["react-table", "virtual:238673ec0a39f356445d82e302eca257f37c4b080aee8ac49cb80d8ef7d46799d87f853ebc400a64d1af218bce2563f720dd3e883b8aadd78f0ac8afa3a8ea9e#npm:7.8.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -5432,6 +5438,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-react-dom-npm-18.0.9-e52458db76-e744e3feba.zip/node_modules/@types/react-dom/",\
           "packageDependencies": [\
             ["@types/react-dom", "npm:18.0.9"],\
+            ["@types/react", "npm:18.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/react-table", [\
+        ["npm:7.7.12", {\
+          "packageLocation": "./.yarn/cache/@types-react-table-npm-7.7.12-3528071866-287ea68e75.zip/node_modules/@types/react-table/",\
+          "packageDependencies": [\
+            ["@types/react-table", "npm:7.7.12"],\
             ["@types/react", "npm:18.0.1"]\
           ],\
           "linkType": "HARD"\
@@ -13966,6 +13982,41 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react-dom",\
             "@types/react",\
             "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-table", [\
+        ["npm:7.8.0", {\
+          "packageLocation": "./.yarn/cache/react-table-npm-7.8.0-61488af438-44ca0fb848.zip/node_modules/react-table/",\
+          "packageDependencies": [\
+            ["react-table", "npm:7.8.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:238673ec0a39f356445d82e302eca257f37c4b080aee8ac49cb80d8ef7d46799d87f853ebc400a64d1af218bce2563f720dd3e883b8aadd78f0ac8afa3a8ea9e#npm:7.8.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-table-virtual-c93e17b564/0/cache/react-table-npm-7.8.0-61488af438-44ca0fb848.zip/node_modules/react-table/",\
+          "packageDependencies": [\
+            ["react-table", "virtual:238673ec0a39f356445d82e302eca257f37c4b080aee8ac49cb80d8ef7d46799d87f853ebc400a64d1af218bce2563f720dd3e883b8aadd78f0ac8afa3a8ea9e#npm:7.8.0"],\
+            ["@types/react", null],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:fb73233ae86852e26150f9b5ac03eed78a196f059a7cbf620501f1b0e66d3a938585bcd47fe333903dbc15b4908657a4d6884a19924dc415d0d7c8a42bceb00c#npm:7.8.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-table-virtual-02270d3f8a/0/cache/react-table-npm-7.8.0-61488af438-44ca0fb848.zip/node_modules/react-table/",\
+          "packageDependencies": [\
+            ["react-table", "virtual:fb73233ae86852e26150f9b5ac03eed78a196f059a7cbf620501f1b0e66d3a938585bcd47fe333903dbc15b4908657a4d6884a19924dc415d0d7c8a42bceb00c#npm:7.8.0"],\
+            ["@types/react", "npm:18.0.1"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
             "react"\
           ],\
           "linkType": "HARD"\

@@ -8,11 +8,12 @@ export const checkmarkShapeStyles = createCheckShapeStyles({
   size: 14,
 })
 
-export const boxShapeStyles = createBoxShapeStyles({
-  size: 20,
-  borderWidth: 1,
-  borderRadius: theme.radii.extra,
-})
+export const boxShapeStyles = ({ size }) =>
+  createBoxShapeStyles({
+    size: size === 'normal' ? 20 : 16,
+    borderWidth: 1,
+    borderRadius: theme.radii.extra,
+  })
 
 export const labelShapeStyles = createLabelShapeStyles({
   fontFamily: theme.fonts.primary,

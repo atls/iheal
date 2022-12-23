@@ -9,17 +9,11 @@ import { Text }       from '@ui/text'
 import { LabelProps } from './label.interface'
 
 const Label: FC<LabelProps> = ({ children, required }) => (
-  <Text
-    fontSize='normal.semiReduced'
-    fontWeight='medium'
-    lineHeight='medium'
-    color='gray70'
-    whiteSpace='nowrap'
-  >
+  <Text fontSize='small.semiIncreased' lineHeight='medium' color='grayscale4' whiteSpace='nowrap'>
     {children}
     <Condition match={required}>
       <Space />
-      <Text color='error50'>
+      <Text color='primaryMain'>
         <Star />
       </Text>
     </Condition>

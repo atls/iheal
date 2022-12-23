@@ -25,7 +25,7 @@ export const GlobalStyles = () => (
           display: flex;
           min-height: 100%;
           flex-direction: column;
-          background-color: ${theme.colors.grayscale7};
+          background-color: ${theme.colors.white};
         }
       `}
   />

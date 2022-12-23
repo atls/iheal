@@ -28,5 +28,20 @@
   "controls.ready": "Готово",
   "controls.waiting": "Ожидание",
   "controls.reject": "Отказ",
-  "controls.closed": "Закрыт"
+  "controls.closed": "Закрыт",
+  "controls.all_time": "За всё время",
+  "controls.today": "Сегодня",
+  "controls.yesterday": "Вчера",
+  "controls.this_week": "Эта неделя",
+  "controls.that_month": "Этот месяц",
+  "controls.last_week": "Прошлая неделя",
+  "controls.table_clock": "Настольные часы",
+  "controls.smart_clock": "Умные часы",
+  "controls.wristwatches": "Наручные часы",
+  "controls.male": "Мужская",
+  "controls.female": "Женская",
+  "controls.deadline": "Крайний срок",
+  "controls.created": "Создал",
+  "controls.technique": "Техника",
+  "controls.malfunction": "Неисправность"
 }

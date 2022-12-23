@@ -68,8 +68,11 @@ const MultiselectMenuItem: FC<MultiselectMenuItemProps> = ({
             <Badge text={title} variant={getStatusColor(title)} />
           </Checkbox>
         </Condition>
-        <Layout flexGrow={1} />
-        <Condition match={selectedItems.includes(value)}>
+        <Condition match={!selectedItems.includes(value) && menuVariant === 'secondary'}>
+          <Box width={20} height={20} />
+        </Condition>
+        <Condition match={selectedItems.includes(value) && menuVariant === 'secondary'}>
+          <Layout flexGrow={1} />
           <ComponentIcon color='black' width={20} height={20} />
         </Condition>
         <Layout flexBasis={16} />

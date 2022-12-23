@@ -1,7 +1,8 @@
 import { InputHTMLAttributes } from 'react'
+import { ReactElement }        from 'react'
 import { PlacementType }       from 'react-laag/dist/PlacementType'
 
-type SelectSizes = 'normal' | 'medium' | 'ghost'
+type SelectSizes = 'normal' | 'small'
 type SelectColors = 'primary' | 'secondary'
 
 export interface SelectProps extends Omit<InputHTMLAttributes<any>, 'onChange'> {
@@ -19,6 +20,8 @@ export interface SelectProps extends Omit<InputHTMLAttributes<any>, 'onChange'> 
   initialItem?: string
   menuWidth?: number
   arrowPosition?: string
+  menuVariant?: 'primary' | 'secondary'
   resetter?: boolean
+  icon?: ReactElement
   placement?: PlacementType
 }

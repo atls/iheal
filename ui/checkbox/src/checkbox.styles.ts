@@ -15,11 +15,12 @@ import { labelAppearanceStyles }     from './styles'
 import { labelPositionStyles }       from './styles'
 import { labelShapeStyles }          from './styles'
 
-export const Box = styled.div<{ checked?: boolean; hover?: boolean; disabled?: boolean }>(
-  boxBaseStyles,
-  boxAppearanceStyles,
-  boxShapeStyles
-)
+export const Box = styled.div<{
+  checked?: boolean
+  hover?: boolean
+  disabled?: boolean
+  size?: string
+}>(boxBaseStyles, boxAppearanceStyles, boxShapeStyles)
 export const Container = styled.div<{ labelPosition?: string; fill?: boolean }>(
   containerBaseStyles,
   containerPositionStyles,

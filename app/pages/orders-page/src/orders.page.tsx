@@ -10,7 +10,7 @@ import { Row }         from '@ui/layout'
 const OrdersPage = () => (
   <Row>
     <Sidebar />
-    <Box flexDirection='column' backgroundColor='white' fill height='100vh !important'>
+    <Box flexDirection='column' backgroundColor='white' fill>
       <Search />
       <Controls />
       <OrdersTable />

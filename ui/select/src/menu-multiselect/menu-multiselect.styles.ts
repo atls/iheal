@@ -16,6 +16,8 @@ export const shapeMenuMultiselectStyles: styleFn = ({ theme, menuWidth }) => ({
   borderRadius: theme.radii.intermediate,
   fontFamily: theme.fonts.primary,
   minWidth: menuWidth !== undefined ? menuWidth : 'auto',
+  maxHeight: 264,
+  overflow: 'scroll',
 })
 
 export const appearanceMenuMultiselectStyles: styleFn = ({ theme }) => ({

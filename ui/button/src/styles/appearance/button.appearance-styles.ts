@@ -76,6 +76,30 @@ const appearanceTertiaryDisabledStyles = createAppearanceStyles({
   borderColor: prop('theme.colors.button.tertiary.disabled.border'),
 })
 
+const appearanceTertiaryActiveDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.tertiaryActive.default.font'),
+  backgroundColor: prop('theme.colors.button.tertiaryActive.default.background'),
+  borderColor: prop('theme.colors.button.tertiaryActive.default.border'),
+})
+
+const appearanceTertiaryActiveHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.tertiaryActive.hover.font'),
+  backgroundColor: prop('theme.colors.button.tertiaryActive.hover.background'),
+  borderColor: prop('theme.colors.button.tertiaryActive.hover.border'),
+})
+
+const appearanceTertiaryActivePressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.tertiaryActive.pressed.font'),
+  backgroundColor: prop('theme.colors.button.tertiaryActive.pressed.background'),
+  borderColor: prop('theme.colors.button.tertiaryActive.pressed.border'),
+})
+
+const appearanceTertiaryActiveDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.tertiaryActive.disabled.font'),
+  backgroundColor: prop('theme.colors.button.tertiaryActive.disabled.background'),
+  borderColor: prop('theme.colors.button.tertiaryActive.disabled.border'),
+})
+
 const appearanceLinkDefaultStyles = createAppearanceStyles({
   fontColor: prop('theme.colors.button.link.default.font'),
   backgroundColor: prop('theme.colors.button.link.default.background'),
@@ -198,6 +222,19 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
       prop('pressed', false),
       appearanceTertiaryPressedStyles,
       ifProp(prop('hover', false), appearanceTertiaryHoverStyles, appearanceTertiaryDefaultStyles)
+    )
+  ),
+  tertiaryActive: ifProp(
+    prop('disabled', false),
+    appearanceTertiaryActiveDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceTertiaryActivePressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceTertiaryActiveHoverStyles,
+        appearanceTertiaryActiveDefaultStyles
+      )
     )
   ),
   link: ifProp(

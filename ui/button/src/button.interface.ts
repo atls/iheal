@@ -11,6 +11,7 @@ type ButtonColors =
   | 'success'
   | 'destructive'
   | 'red'
+  | 'tertiaryActive'
 
 type ButtonSizes = 'sm' | 'md' | 'lg' | 'smTransparent' | 'mdTransparent' | 'lgTransparent'
 

@@ -12,6 +12,8 @@ import { useEffect }                       from 'react'
 import { Badge }                           from '@ui/badge'
 import { Condition }                       from '@ui/condition'
 import { ChevronDownIcon }                 from '@ui/icons'
+import { FillXCloseIcon }                  from '@ui/icons'
+import { Box }                             from '@ui/layout'
 import { Column }                          from '@ui/layout'
 import { Layout }                          from '@ui/layout'
 import { Text }                            from '@ui/text'
@@ -36,6 +38,8 @@ const Select: FC<SelectProps> = ({
   required = false,
   placeholder,
   multiselect = false,
+  icon,
+  menuVariant = 'primary',
   attachment,
   selectedDefault,
   menuWidth,
@@ -61,12 +65,6 @@ const Select: FC<SelectProps> = ({
         }
       },
     })
-
-  useEffect(() => {
-    if (resetter) {
-      reset()
-    }
-  }, [resetter, reset])
 
   const { isOpen, buttonProps, menuProps, getMenuItemProps, renderMenu, selectedItem }: any =
     useSelect({
@@ -103,22 +101,22 @@ const Select: FC<SelectProps> = ({
     props.color = colors // eslint-disable-line no-param-reassign
   }
 
-  const ref = useRef()
-  console.log(ref)
+  useEffect(() => {
+    if (resetter) {
+      reset()
+    }
+  }, [resetter, reset])
+
+  const ref = useRef<HTMLDivElement | null>(null)
 
   const [width, setWidth] = useState<number>(0)
 
   useEffect(() => {
-    const calc = ref!.current!.offsetWidth - 60
-    setWidth(calc)
-  }, [])
+    setWidth(ref!.current!.clientWidth - 100)
+  })
 
   return (
     <Column fill ref={ref}>
-      <Condition match={Boolean(label.length)}>
-        <Label required={required}>{label}</Label>
-        <Layout flexBasis={8} />
-      </Condition>
       <Button
         isSelected={!!selectedItem}
         selectedItems={Boolean(selectedItems.length)}
@@ -139,26 +137,55 @@ const Select: FC<SelectProps> = ({
         <Condition match={!value.length}>
           <Text color='grayscale4'>{placeholder}</Text>
         </Condition>
-        <Layout maxWidth={width} overflow='scroll'>
-          {selectedItems.map((selectedItemForRender, index) => (
-            <Layout
-              mr='4px'
-              {...getSelectedItemProps({
-                selectedItem: selectedItemForRender,
-                index,
-              })}
-            >
-              <Badge
-                text={selectedItemForRender}
-                isRemove
-                variant={getStatusColor(selectedItemForRender)}
-                remove={() => removeSelectedItem(selectedItemForRender)}
-              />
-            </Layout>
-          ))}
-        </Layout>
-        <Condition match={arrowPosition === 'right'}>
+        <Condition match={!multiselect}>
+          <Column fill justifyContent='center'>
+            <Condition match={value.length && Boolean(label.length)}>
+              <Layout flexBasis={6} />
+              <Label required={required}>{label}</Label>
+              <Layout flexBasis={2} />
+            </Condition>
+            <Text color='black' fontWeight='medium' lineHeight='medium'>
+              {value}
+            </Text>
+            <Condition match={Boolean(label.length)}>
+              <Layout flexBasis={6} />
+            </Condition>
+          </Column>
+        </Condition>
+        <Condition match={Boolean(icon)}>{icon}</Condition>
+        <Condition match={!icon}>
+          <Layout maxWidth={width} overflow='scroll'>
+            {selectedItems.map((selectedItemForRender, index) => (
+              <Layout
+                mr='4px'
+                {...getSelectedItemProps({
+                  selectedItem: selectedItemForRender,
+                  index,
+                })}
+              >
+                <Badge
+                  text={selectedItemForRender}
+                  isRemove
+                  variant={getStatusColor(selectedItemForRender)}
+                  remove={() => removeSelectedItem(selectedItemForRender)}
+                />
+              </Layout>
+            ))}
+          </Layout>
+        </Condition>
+        <Condition match={arrowPosition === 'right' && !icon}>
           <Layout flexGrow={1} flexShrink={0} />
+          <Condition match={Boolean(selectedItems.length)}>
+            <Box
+              onClick={(e) => {
+                e.stopPropagation()
+                reset()
+              }}
+            >
+              <FillXCloseIcon color='grayscale4' width={16} height={16} />
+            </Box>
+            <Layout flexBasis={8} flexShrink={0} />
+          </Condition>
           <ArrowContainer isOpen={isOpen} selectedItems={!!selectedItems.length}>
             <ChevronDownIcon color='grayscale4' width={20} height={20} />
           </ArrowContainer>
@@ -203,6 +230,7 @@ const Select: FC<SelectProps> = ({
                     removeSelectedItem={removeSelectedItem}
                     title={item}
                     value={item}
+                    menuVariant={menuVariant}
                   />
                 ))}
               </MenuMultiselect>

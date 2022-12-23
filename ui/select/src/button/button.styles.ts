@@ -4,6 +4,6 @@ import { getShapeStyles }      from '../styles'
 
 export const baseStyles = getBaseStyles()
 
-export const appearanceStyles = () => getAppearanceStyles()
+export const appearanceStyles = ({ theme }) => getAppearanceStyles(theme)
 
 export const shapeStyles = ({ theme }) => getShapeStyles(theme)

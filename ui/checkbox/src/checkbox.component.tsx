@@ -19,6 +19,7 @@ const CheckboxWithoutRef = (
     icon = 'check',
     active,
     disabled,
+    size = 'normal',
     ghost = false,
     onCheck = (newState) => doNothing(),
     ...props
@@ -35,7 +36,7 @@ const CheckboxWithoutRef = (
       ref={ref}
     >
       <Condition match={!ghost}>
-        <Box checked={active!} hover={hover!} disabled={disabled!}>
+        <Box size={size} checked={active!} hover={hover!} disabled={disabled!}>
           <SelectCheckmark checked={active!}>
             <Condition match={icon === 'check'}>
               <ComponentIcon color='white' width={14} height={14} />

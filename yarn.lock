@@ -248,6 +248,7 @@ __metadata:
     "@emotion/react": ^11.10.0
     "@emotion/styled": ^11.10.0
     "@shared/data": "workspace:0.0.1"
+    "@types/react-table": ^7
     "@types/styled-system": ^5
     "@ui/button": "workspace:0.0.1"
     "@ui/checkbox": "workspace:0.0.1"
@@ -262,6 +263,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-intl: 5.24.3
+    react-table: ^7.8.0
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/css": "*"
@@ -2926,6 +2928,15 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: e744e3feba25fc43733289d4df4d9c0e59fcca7f34e8c89d75f81a339accb2bd70236d69382d47d2c0ad06a1529b2e56aa6171fe175854d60e07156ddceedfcb
+  languageName: node
+  linkType: hard
+
+"@types/react-table@npm:^7":
+  version: 7.7.12
+  resolution: "@types/react-table@npm:7.7.12"
+  dependencies:
+    "@types/react": "*"
+  checksum: 287ea68e75b56c2e70e6d6491cd172348c7302b032789047eb2dca1b25b240684e48a60f58140575828b790f95724b9f3ec4d3adce82fc1c05d994def1449009
   languageName: node
   linkType: hard
 
@@ -8475,6 +8486,15 @@ __metadata:
     react: ^16.0.0 || ^17.0.0
     react-dom: ^16.0.0 || ^17.0.0
   checksum: 8daffaff813bfc890c2f4528e8044b493cbac4400e27f161ce2d5291cf677bdcec1aee5a06f2e57013e4c2ed6b6c8750712c7be73be4861a84f88ac64af815a3
+  languageName: node
+  linkType: hard
+
+"react-table@npm:^7.8.0":
+  version: 7.8.0
+  resolution: "react-table@npm:7.8.0"
+  peerDependencies:
+    react: ^16.8.3 || ^17.0.0-0 || ^18.0.0
+  checksum: 44ca0fb848c6869cd793cede8dc33072b38ebb8f8d2833565afe7cf3eac5d1fa455ac5fb9d06838b16fab0523d5d03e3e82f7645032f71245096e67b892313b9
   languageName: node
   linkType: hard
 

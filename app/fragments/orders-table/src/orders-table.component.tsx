@@ -1,124 +1,92 @@
-import styled          from '@emotion/styled'
+import React               from 'react'
+import { useEffect }       from 'react'
+import { useMemo }         from 'react'
+import { useState }        from 'react'
 
-import React           from 'react'
-import { FC }          from 'react'
-import { useCallback } from 'react'
-import { useEffect }   from 'react'
-import { useRef }      from 'react'
-import { useState }    from 'react'
+import { Orders }          from '@shared/data'
+import { Box }             from '@ui/layout'
+import { useMockedOrders } from '@shared/data'
 
-const TableWrapper = styled('div')({
-  overflow: 'hidden',
-  width: '100%',
-})
-
-const TableStyles = styled('table')(({ headersLength }: any) => ({
-  maxWidth: 'calc(100vw - 260px)',
-  display: 'grid',
-  overflow: 'auto',
-  gridTemplateColumns: [...Array(headersLength)].map(() => 'minmax(150px, 2fr)').join(' '),
-}))
-
-const createHeaders = (headers) => {
-  return headers.map((item) => ({
-    text: item,
-    ref: useRef(),
-  }))
-}
-
-const Table: FC = ({ headers, minCellWidth, tableContent }) => {
-  const [tableHeight, setTableHeight] = useState('auto')
-  const [activeIndex, setActiveIndex] = useState(null)
-  const tableElement = useRef(null)
-  const columns = createHeaders(headers)
-
-  useEffect(() => {
-    setTableHeight(tableElement!.current?.offsetHeight)
-  }, [])
-
-  const mouseDown = (index) => {
-    setActiveIndex(index)
-  }
-
-  const mouseMove = useCallback(
-    (e) => {
-      const gridColumns = columns.map((col, i) => {
-        if (i === activeIndex) {
-          const width = e.clientX - col.ref.current.offsetLeft
-
-          if (width >= minCellWidth && width <= 350) {
-            return `${width}px`
-          }
-        }
-        return `${col.ref.current.offsetWidth}px`
-      })
-
-      tableElement.current.style.gridTemplateColumns = `${gridColumns.join(' ')}`
-    },
-    [activeIndex, columns, minCellWidth]
-  )
-
-  const removeListeners = useCallback(() => {
-    window.removeEventListener('mousemove', mouseMove)
-    window.removeEventListener('mouseup', removeListeners)
-  }, [mouseMove])
-
-  const mouseUp = useCallback(() => {
-    setActiveIndex(null)
-    removeListeners()
-  }, [setActiveIndex, removeListeners])
-
-  useEffect(() => {
-    if (activeIndex !== null) {
-      window.addEventListener('mousemove', mouseMove)
-      window.addEventListener('mouseup', mouseUp)
-    }
-
-    return () => {
-      removeListeners()
-    }
-  }, [activeIndex, mouseMove, mouseUp, removeListeners])
-
-  return (
-    <>
-      <TableWrapper>
-        <TableStyles headersLength={headers.length} className='resizeable-table' ref={tableElement}>
-          <thead>
-            <tr>
-              {columns.map(({ ref, text }, i) => (
-                <th ref={ref} key={text}>
-                  <span>{text}</span>
-                  <div
-                    style={{ height: tableHeight }}
-                    onMouseDown={() => mouseDown(i)}
-                    className={`resize-handle ${activeIndex === i ? 'active' : 'idle'}`}
-                  />
-                </th>
-              ))}
-            </tr>
-          </thead>
-        </TableStyles>
-      </TableWrapper>
-    </>
-  )
-}
+import { Styles }          from './styles'
+import { Table }           from './table'
 
 const OrdersTable = () => {
-  const tableHeaders = [
-    'Заказ №',
-    'Фото',
-    'Статус',
-    'Создал',
-    'Срок',
-    'Клиент',
-    'Техника',
-    'Группа',
-    'Адрес клиента',
-    'Исполнитель',
-    'Сумма',
-  ]
+  const { orders: ordersData } = useMockedOrders()
 
-  return <Table headers={tableHeaders} minCellWidth={120} />
+  const [orders, setOrders] = useState<Orders[]>([])
+
+  useEffect(() => {
+    setOrders(ordersData)
+  }, [ordersData])
+
+  const data = useMemo(() => [...orders], [orders])
+
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: 'Заказ #',
+        accessor: 'orderLink',
+        width: 80,
+      },
+      {
+        Header: 'Фото',
+        width: 72,
+        accessor: 'photo',
+      },
+      {
+        Header: 'Статус',
+        accessor: 'status',
+        width: 140,
+      },
+      {
+        Header: 'Создал',
+        accessor: 'creator.firstName',
+        width: 200,
+      },
+      {
+        Header: 'Срок',
+        accessor: 'deadline',
+        width: 120,
+      },
+      {
+        Header: 'Клиент',
+        accessor: 'client.firstName',
+        width: 260,
+      },
+      {
+        Header: 'Техника',
+        accessor: 'technique',
+        width: 200,
+      },
+      {
+        Header: 'Группа',
+        accessor: 'group',
+        width: 200,
+      },
+      {
+        Header: 'Адрес клиента',
+        accessor: 'clientAddress',
+      },
+      {
+        Header: 'Исполнитель',
+        accessor: 'performer.firstName',
+      },
+      {
+        Header: 'Сумма',
+        accessor: 'amount',
+        width: 200,
+      },
+    ],
+    []
+  )
+
+  return (
+    <Box maxWidth='calc(100vw - 260px)'>
+      <Styles>
+        <Table columns={columns} data={data} />
+      </Styles>
+    </Box>
+  )
 }
 
 export { OrdersTable }
