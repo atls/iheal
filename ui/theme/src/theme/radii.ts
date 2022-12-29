@@ -10,6 +10,7 @@ const radii = {
   xl: 50,
   xxl: 80,
   max: 100,
+  top12: '12px 12px 0px 0px',
   leftSide4: '4px 0px 0px 4px',
   rightSide4: '0px 4px 4px 0px',
   topLeft12: '12px 0px 0px 0px',

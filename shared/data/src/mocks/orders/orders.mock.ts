@@ -23,8 +23,9 @@ const ordersMock: Orders[] = [...Array(10)].map(() => ({
   creator: {
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),
+    createdAt: faker.date.between(new Date('2022-12-05T00:00:00'), new Date('2022-12-30T00:00:00')),
   },
-  deadline: 'faker.date.soon(10, new Date())',
+  deadline: faker.date.soon(10, new Date()),
   client: {
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),

@@ -20,7 +20,7 @@ export const Styles = styled.div`
   
   table td span {
     white-space: nowrap;
-  text-overflow: ellipsis;
+    text-overflow: ellipsis;
   }
 `
 
@@ -45,7 +45,10 @@ export const TableHead = styled('thead')``
 
 export const TableRow = styled('tr')`
   border-bottom: ${({ theme }: any) => theme.borders.grayscale7};
+  border-left: ${({ isSelected, theme }: any) =>
+    isSelected ? theme.borders.primaryMain3 : theme.borders.transparent3};
   border-top: none;
+  background: ${({ theme, hover }: any) => (hover ? theme.colors.grayscaleBg : theme.colors.white)};
 `
 
 export const TableHeader = styled('th')`
@@ -75,5 +78,5 @@ export const TableData = styled('td')`
   white-space: nowrap;
   text-overflow: ellipsis;
   border-top: none;
-  overflow-x: hidden;
+  overflow: hidden;
 `

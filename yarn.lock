@@ -244,18 +244,22 @@ __metadata:
   resolution: "@app/orders-table-fragment@workspace:app/fragments/orders-table"
   dependencies:
     "@apollo/client": ^3.6.9
+    "@app/store": "workspace:0.0.1"
     "@emotion/css": ^11.9.0
     "@emotion/react": ^11.10.0
     "@emotion/styled": ^11.10.0
     "@shared/data": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
     "@types/react-table": ^7
     "@types/styled-system": ^5
     "@ui/button": "workspace:0.0.1"
     "@ui/checkbox": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
+    "@ui/select": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/theme": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
@@ -385,6 +389,19 @@ __metadata:
     next: "*"
     react: "*"
     react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/store@workspace:0.0.1, @app/store@workspace:app/store":
+  version: 0.0.0-use.local
+  resolution: "@app/store@workspace:app/store"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@types/react": ^18.0.1
+    react: ^18.2.0
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
   languageName: unknown
   linkType: soft
 
@@ -3171,7 +3188,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/image@workspace:ui/image":
+"@ui/image@workspace:0.0.1, @ui/image@workspace:ui/image":
   version: 0.0.0-use.local
   resolution: "@ui/image@workspace:ui/image"
   dependencies:

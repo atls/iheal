@@ -1,6 +1,6 @@
 import { styleFn } from 'styled-system'
 
-export const baseMenuStyles: styleFn = ({ triggerBounds }) => ({
+export const baseMenuStyles: styleFn = ({ triggerBounds, placement }) => ({
   display: 'flex',
   boxSizing: 'border-box',
   flexDirection: 'column',
@@ -9,7 +9,7 @@ export const baseMenuStyles: styleFn = ({ triggerBounds }) => ({
   padding: 0,
   width: triggerBounds ? triggerBounds.width : 'auto',
   zIndex: 800,
-  marginTop: 8,
+  marginTop: placement === 'top-center' ? -6 : 8,
 })
 
 export const shapeMenuStyles: styleFn = ({ theme, menuWidth }) => ({

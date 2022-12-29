@@ -43,5 +43,12 @@
   "controls.deadline": "Крайний срок",
   "controls.created": "Создал",
   "controls.technique": "Техника",
-  "controls.malfunction": "Неисправность"
+  "controls.malfunction": "Неисправность",
+  "orders_table.selected": "Выбранно",
+  "orders_table.of": "из",
+  "orders_table.create_invoice": "Создать счёт",
+  "orders_table.appoint_an_performer": "Назначить исполнителя",
+  "orders_table.remove": "Удалить",
+  "orders_table.performer": "Исполнитель",
+  "order_table.days": "дней"
 }

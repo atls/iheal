@@ -1,1 +1,1 @@
-export type Variant = 'nav' | 'tertiary' | 'transparentRed'
+export type Variant = 'red'

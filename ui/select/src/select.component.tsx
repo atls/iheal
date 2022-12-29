@@ -134,9 +134,10 @@ const Select: FC<SelectProps> = ({
             <ChevronDownIcon color='grayscale4' width={20} height={20} />
           </ArrowContainer>
         </Condition>
-        <Condition match={!value.length}>
+        <Condition match={!value.length && colors !== 'secondary'}>
           <Text color='grayscale4'>{placeholder}</Text>
         </Condition>
+        <Condition match={colors === 'secondary'}>{placeholder}</Condition>
         <Condition match={!multiselect}>
           <Column fill justifyContent='center'>
             <Condition match={value.length && Boolean(label.length)}>
@@ -144,9 +145,11 @@ const Select: FC<SelectProps> = ({
               <Label required={required}>{label}</Label>
               <Layout flexBasis={2} />
             </Condition>
-            <Text color='black' fontWeight='medium' lineHeight='medium'>
-              {value}
-            </Text>
+            <Condition match={colors !== 'secondary'}>
+              <Text color='black' fontWeight='medium' lineHeight='medium'>
+                {value}
+              </Text>
+            </Condition>
             <Condition match={Boolean(label.length)}>
               <Layout flexBasis={6} />
             </Condition>
@@ -200,7 +203,7 @@ const Select: FC<SelectProps> = ({
               exit={{ opacity: 0, y: -10 }}
               transition={{ type: 'spring', stiffness: 200, damping: 12 }}
             >
-              <Menu {...menuProps} menuWidth={menuWidth}>
+              <Menu {...menuProps} placement={placement} menuWidth={menuWidth}>
                 {items.map((item, index) => (
                   <MenuItem
                     {...getMenuItemProps(item, index)}

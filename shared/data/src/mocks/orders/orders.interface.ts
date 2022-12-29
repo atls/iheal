@@ -6,6 +6,7 @@ export interface Orders {
   creator: {
     firstName: string
     lastName: string
+    createdAt: Date
   }
   deadline: Date
   client: {

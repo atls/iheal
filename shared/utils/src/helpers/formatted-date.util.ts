@@ -11,6 +11,15 @@ const formattedDate = (variant: string, date: Date): string => {
   if (variant === 'fullYear')
     return DateTime.fromJSDate(date).setLocale('ru').toFormat('dd.LL.yyyy')
 
+  if (variant === 'date')
+    return DateTime.fromJSDate(date).setLocale('ru').toFormat('LL LLL yyyy hh:mm')
+
+  if (variant === 'daysLeft') {
+    const dif = date1.diff(currentTime, ['days'])
+
+    return dif.toFormat('d')
+  }
+
   if (variant === 'time') return DateTime.fromJSDate(date).setLocale('ru').toFormat('hh:mm')
 
   if (variant === 'plusMonth')

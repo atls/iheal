@@ -2,7 +2,7 @@ import { InputHTMLAttributes } from 'react'
 import { ReactElement }        from 'react'
 import { PlacementType }       from 'react-laag/dist/PlacementType'
 
-type SelectSizes = 'normal' | 'small'
+type SelectSizes = 'normal' | 'small' | 'smallSecondary'
 type SelectColors = 'primary' | 'secondary'
 
 export interface SelectProps extends Omit<InputHTMLAttributes<any>, 'onChange'> {

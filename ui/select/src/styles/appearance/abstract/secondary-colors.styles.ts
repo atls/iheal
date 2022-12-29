@@ -8,7 +8,11 @@ import { prop }                   from 'styled-tools'
 const getSecondaryColorsStyles = (theme): styleFn => {
   const secondaryDefaultColors: styleFn = ({ isOpen }) => ({
     '&': createAppearanceStyles({
-      fontColor: prop('theme.colors.button.tertiary.default.font'),
+      fontColor: prop(
+        isOpen
+          ? 'theme.colors.button.tertiaryActive.default.font'
+          : 'theme.colors.button.tertiary.default.font'
+      ),
       backgroundColor: prop('theme.colors.button.tertiary.default.background'),
       borderColor: prop(
         isOpen
@@ -25,7 +29,11 @@ const getSecondaryColorsStyles = (theme): styleFn => {
 
   const secondaryHoverColors: styleFn = ({ isOpen }) => ({
     '&:hover': createAppearanceStyles({
-      fontColor: prop('theme.colors.button.tertiary.hover.font'),
+      fontColor: prop(
+        isOpen
+          ? 'theme.colors.button.tertiaryActive.hover.font'
+          : 'theme.colors.button.tertiary.hover.font'
+      ),
       backgroundColor: prop('theme.colors.button.tertiary.hover.background'),
       borderColor: prop(
         isOpen
