@@ -1,0 +1,14 @@
+{
+  "name": "@shared/data",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@apollo/client": "^3.6.9",
+    "@faker-js/faker": "^7.6.0",
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "@apollo/client": "*",
+    "react": "*"
+  }
+}

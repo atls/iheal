@@ -1,0 +1,45 @@
+const fontSizes = {
+  small: {
+    reduced: 9,
+    semiDefault: 10,
+    default: 11,
+    semiIncreased: 12,
+    increased: 13,
+    semiLarge: 14,
+  },
+  normal: {
+    small: 15,
+    semiReduced: 16,
+    reduced: 17,
+    semiDefault: 18,
+    default: 19,
+    semiIncreased: 20,
+    increased: 21,
+    semiLarge: 22,
+    large: 23,
+    SemiHuge: 24,
+  },
+  medium: {
+    small: 25,
+    semiReduced: 28,
+    reduced: 30,
+    semiDefault: 32,
+    default: 36,
+    semiIncreased: 38,
+    increased: 40,
+    semiLarge: 44,
+    large: 48,
+  },
+  large: {
+    small: 58,
+    semiReduced: 64,
+    reduced: 68,
+    semiDefault: 72,
+    default: 80,
+    semiIncreased: 90,
+    increased: 120,
+    semiLarge: 135,
+  },
+}
+
+export { fontSizes }
